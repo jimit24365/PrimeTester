@@ -17,6 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
@@ -334,8 +336,26 @@ public class GameActivity extends AppCompatActivity {
         Integer currentNumber = Integer.parseInt(childPrimeTv.getText().toString());
         if (isPrime(currentNumber)) {
             playerScore += 1;
+            Animation animation = AnimationUtils.loadAnimation(GameActivity.this,R.anim.bounce);
+            animation.setDuration(1000);
+            scoreBoardTv.startAnimation(animation);
+            animation.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    scoreBoardTv.setText(playerScore + "");
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
         }
-        scoreBoardTv.setText(playerScore + "");
     }
 
     /*
