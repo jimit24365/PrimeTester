@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PrimeTester</string>
+
+    <!-- GameActivity Starts-->
+    <string name="init_time">0:00</string>
+    <string name="init_score">0</string>
+    <string name="play_btn">Play</string>
+    <string name="pause_btn">Pause</string>
+    <string name="game_over">Game Over</string>
+    <string name="start_game">Start New Game</string>
+    <string name="resume_game">Resume Game</string>
+    <string name="title_activity_game">PrimeTester</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_settings">Game Level</string>
+    <!--GameActivity Ends-->
+
+    <!-- SettingsActivity Starts  -->
+    <string name="preferenece_key">game_pref</string>
+    <string name="preference_title">Set Game Level</string>
+    <string name="level_one">Easy</string>
+    <string name="level_two">Moderate</string>
+    <string name="level_three">Pro</string>
+</resources>
