@@ -31,7 +31,7 @@ public class SettingsActivity extends PreferenceActivity implements Preference.O
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(
                 getResources().getString(R.string.preferenece_key),
-                Integer.parseInt((String) newValue)).apply();
+                Integer.parseInt((String) newValue));
         finish();
         return true;
     }
